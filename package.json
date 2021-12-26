@@ -13,11 +13,14 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@cosmjs/proto-signing": "^0.26.5",
+    "@cosmjs/stargate": "^0.26.5",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-i18n": "^9.2.0-beta.25",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "vuex-along": "^1.2.13"
   },
   "devDependencies": {
     "@vicons/ionicons5": "^0.11.0",

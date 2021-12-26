@@ -19,9 +19,21 @@ const routes = [
     ]
   },
   {
-    path: '/import',
-    name: 'ImportMnemonic',
-    component: () => import('../views/ImportMnemonic')
+    path: '/mnemonic',
+    name: 'Mnemonic',
+    component: () => import('../views/Mnemonic'),
+    children: [
+      {
+        path: 'import',
+        name: 'ImportMnemonic',
+        component: () => import('../views/ImportMnemonic')
+      },
+      {
+        path: 'password',
+        name: 'Password',
+        component: () => import('../views/Password')
+      }
+    ]
   }
 ]
 

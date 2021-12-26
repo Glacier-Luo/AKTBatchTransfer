@@ -1,21 +1,23 @@
 <template>
   <div>
-    <NMenu mode="horizontal" default-value="Transfer" :options="menuOptions" />
+    <NMenu mode="horizontal" default-value="Transfer" :options="menuOptions"/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import {defineComponent, h} from "vue"
+import {defineComponent, h, onMounted} from "vue"
 import {$t, changeLanguage} from '@/language'
 import {NMenu, NIcon, NDropdown, NButton} from "naive-ui"
 import {RouterLink} from "vue-router"
 import {
   RocketOutline as TransferIcon,
   TelescopeOutline as ExplorerIcon
-} from "@vicons/ionicons5";
+} from "@vicons/ionicons5"
+import router from "@/router"
+import {useStore} from 'vuex'
 
-function renderIcon (icon) {
+function renderIcon(icon) {
   return () => h(NIcon, null, {default: () => h(icon)})
 }
 
@@ -58,7 +60,7 @@ const menuOptions = [
           ],
           'on-select': changeLanguage
         },
-        ()=><NButton>Language</NButton>
+        () => <NButton>Language</NButton>
     ),
     key: 'Language'
   }
@@ -67,7 +69,19 @@ const menuOptions = [
 export default defineComponent({
   name: 'Main',
   components: {NMenu},
-  setup () {
+  setup() {
+    const store = useStore()
+    onMounted(() => {
+      if (store.state.persistent.serializedWallet) {
+        if (store.state.temporary.wallet) {
+          return
+        } else {
+          router.push({name: 'Password'})
+        }
+      } else {
+        router.push({name: 'ImportMnemonic'})
+      }
+    })
     return {
       menuOptions
     }
