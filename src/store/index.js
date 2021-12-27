@@ -26,3 +26,8 @@ export default createStore({
     }
   })]
 })
+
+export function clear() {
+  window.clearVuexAlong(true, true)
+  window.location.reload()
+}

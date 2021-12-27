@@ -3,7 +3,17 @@
     <NCard title="Enter password" class="content">
       <NSpace vertical>
         <NInput v-model:value="password" type="password" placeholder="Password" @keyup.enter="submit"/>
-        <NButton class="btn" @click="submit">Submit</NButton>
+        <div class="buttons">
+          <NSpace>
+            <NPopconfirm @positive-click="clear" @negative-click="()=>{}">
+              <template #trigger>
+                <NButton type="error">Logout</NButton>
+              </template>
+              Your wallet will be deleted, you sure?
+            </NPopconfirm>
+            <NButton @click="submit">Submit</NButton>
+          </NSpace>
+        </div>
       </NSpace>
     </NCard>
   </div>
@@ -11,8 +21,9 @@
 
 <script>
 import {defineComponent, onMounted, ref} from "vue"
-import {NCard, NInput, NButton, NSpace, useMessage} from 'naive-ui'
+import {NCard, NInput, NButton, NSpace, useMessage, NPopconfirm} from 'naive-ui'
 import {useStore} from "vuex"
+import {clear} from '@/store'
 import router from "@/router"
 import {
   DirectSecp256k1HdWallet,
@@ -22,7 +33,7 @@ import {
 
 export default defineComponent({
   name: "Password",
-  components: {NCard, NInput, NButton, NSpace},
+  components: {NCard, NInput, NButton, NSpace, NPopconfirm},
   setup() {
     const message = useMessage()
     const store = useStore()
@@ -58,7 +69,8 @@ export default defineComponent({
 
     return {
       password,
-      submit
+      submit,
+      clear
     }
   }
 })
@@ -71,8 +83,8 @@ export default defineComponent({
   justify-content: center;
 }
 
-.btn {
-  display: block;
-  margin: 0 auto;
+.buttons {
+  display: flex;
+  justify-content: center;
 }
 </style>
