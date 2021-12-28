@@ -1,4 +1,17 @@
 {
   "Transfer": "Transfer",
-  "Explorer": "Explorer"
+  "Explorer": "Explorer",
+  "Settings": "Settings",
+  "NodeSettings": "NodeSettings",
+  "RPCUrl": "RPC url",
+  "APIUrl": "API url",
+  "SettingsSubmit": "Submit Settings",
+  "Checking": "Checking……",
+  "Error": "Error",
+  "RPCError": "Cannot access the rpc node, please check the rpc url.",
+  "APIError": "Cannot access the api node, please check the api url.",
+  "NetworkError": "Please check the node or the network, here is the error message:\n",
+  "SetSuccess": "Set success!",
+  "Balance": "Balance",
+  "Address": "Address"
 }

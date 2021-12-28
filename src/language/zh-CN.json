@@ -1,4 +1,17 @@
 {
   "Transfer": "转账",
-  "Explorer": "浏览"
+  "Explorer": "浏览",
+  "Settings": "设置",
+  "NodeSettings": "节点设置",
+  "RPCUrl": "RPC 地址",
+  "APIUrl": "API 地址",
+  "SettingsSubmit": "保存设置",
+  "Checking": "检查中……",
+  "Error": "错误",
+  "RPCError": "无法访问rpc节点，请检查rpc链接。",
+  "APIError": "无法访问api节点，请检查api链接。",
+  "NetworkError": "请检查节点或网络，这里是错误信息：\n",
+  "SetSuccess": "设置成功！",
+  "Balance": "余额",
+  "Address": "地址"
 }

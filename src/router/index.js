@@ -15,6 +15,11 @@ const routes = [
         path: 'explorer',
         name: 'Explorer',
         component: () => import('../views/Explorer')
+      },
+      {
+        path: 'settings',
+        name: 'Settings',
+        component: () => import('../views/Settings')
       }
     ]
   },
