@@ -13,5 +13,6 @@
   "NetworkError": "Please check the node or the network, here is the error message:\n",
   "SetSuccess": "Set success!",
   "Balance": "Balance",
-  "Address": "Address"
+  "Address": "Address",
+  "Refreshing!": "Refreshing!"
 }

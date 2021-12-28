@@ -23,7 +23,7 @@ const mutations = {
   setAPI(state, api) {
     state.api = api
   },
-  async flushBalance(state) {
+  async refreshBalance(state) {
     const response = await fetch(state.api + "/cosmos/bank/v1beta1/balances/" + state.address)
     const data = await response.json()
     const balance = data.balances.length > 0 && data.balances.some((b) => b.denom === "uakt") ? data.balances.find((b) => b.denom === "uakt").amount : 0

@@ -9,7 +9,7 @@
 <script>
 import {computed, defineComponent, h, onMounted} from "vue"
 import {$t, changeLanguage} from '@/language'
-import {NMenu, NIcon, NDropdown, NButton, NPopover} from "naive-ui"
+import {NMenu, NIcon, NDropdown, NButton, NPopover, useMessage} from "naive-ui"
 import {RouterLink} from "vue-router"
 import {
   RocketOutline as TransferIcon,
@@ -38,7 +38,7 @@ const menuOptions = [
             return <div>
               <p onClick={copy(useStore().state.persistent.address)}>
                 <span>{$t('Address')}: </span>{useStore().state.persistent.address}
-                <NIcon style="vertical-align: middle;"><CopyOutline /></NIcon>
+                <NIcon style="vertical-align: middle;"><CopyOutline/></NIcon>
               </p>
             </div>
           },
@@ -113,10 +113,17 @@ export default defineComponent({
   components: {NMenu},
   setup() {
     const store = useStore()
+    const message = useMessage()
 
-    function keyOnUpdate(key) {
-      if(key === 'Information')
-        store.commit('persistent/flushBalance')
+    async function keyOnUpdate(key) {
+      if (key === 'Information') {
+        try {
+          await store.commit('persistent/refreshBalance')
+          message.info($t('Refreshing!'))
+        } catch (e) {
+          message.error(e.message)
+        }
+      }
     }
 
     onMounted(() => {
@@ -130,7 +137,7 @@ export default defineComponent({
         router.push({name: 'ImportMnemonic'})
       }
 
-      store.commit('persistent/flushBalance')
+      store.commit('persistent/refreshBalance')
     })
     return {
       menuOptions,

@@ -13,5 +13,6 @@
   "NetworkError": "请检查节点或网络，这里是错误信息：\n",
   "SetSuccess": "设置成功！",
   "Balance": "余额",
-  "Address": "地址"
+  "Address": "地址",
+  "Refreshing!": "刷新中！"
 }
