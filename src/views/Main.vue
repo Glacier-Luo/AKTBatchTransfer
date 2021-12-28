@@ -43,7 +43,7 @@ const menuOptions = [
             </div>
           },
           trigger() {
-            return <div onClick={useStore().commit('persistent/flushBalance')}>
+            return <div>
               {$t('Balance')}: {uakt2akt(balance.value)} AKT
               <NIcon style="vertical-align: middle;"><RefreshIcon/></NIcon>
             </div>
