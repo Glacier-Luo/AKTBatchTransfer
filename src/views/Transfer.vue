@@ -150,9 +150,9 @@ export default defineComponent({
     ]
     let data = reactive([
       {
-        name: 'glacier',
-        address: 'akash1ax4v0gxxesjxau4hvvt0z8xefml5ylysd8nww4',
-        amount: '1',
+        name: '',
+        address: '',
+        amount: '',
         memo: '',
         hash: '',
         status: 'None'
