@@ -13,7 +13,7 @@ import {NMenu, NIcon, NDropdown, NButton, NPopover, useMessage} from "naive-ui"
 import {RouterLink} from "vue-router"
 import {
   RocketOutline as TransferIcon,
-  TelescopeOutline as ExplorerIcon,
+  // TelescopeOutline as ExplorerIcon,
   LanguageOutline as LanguageIcon,
   CogOutline as SettingsIcon,
   RefreshOutline as RefreshIcon,
@@ -64,17 +64,17 @@ const menuOptions = [
     key: 'Transfer',
     icon: renderIcon(TransferIcon)
   },
-  {
-    label: () => h(
-        RouterLink, {
-          to: {
-            name: 'Explorer',
-          }
-        }, {default: () => $t('Explorer')}
-    ),
-    key: 'Explorer',
-    icon: renderIcon(ExplorerIcon)
-  },
+  // {
+  //   label: () => h(
+  //       RouterLink, {
+  //         to: {
+  //           name: 'Explorer',
+  //         }
+  //       }, {default: () => $t('Explorer')}
+  //   ),
+  //   key: 'Explorer',
+  //   icon: renderIcon(ExplorerIcon)
+  // },
   {
     label: () => h(
         RouterLink, {
