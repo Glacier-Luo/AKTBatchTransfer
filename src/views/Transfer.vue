@@ -200,6 +200,7 @@ export default defineComponent({
         return
       }
       if(row.status === 'Success' || row.status === 'Pending') {
+        message.error($t('ResendStop'))
         return
       }
       if(row.memo.length > 255) {

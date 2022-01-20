@@ -27,5 +27,6 @@
   "ProcessReminder": "Send All only processes data with status of None or Failed.",
   "Memo is too long": "Memo is too long",
   "Resending...": "Resending...",
-  "ConfirmResend": "Are you sure you want to resend it?"
+  "ConfirmResend": "Are you sure you want to resend it?",
+  "ResendStop": "Resend has been stopped because this tx has been successfully sent."
 }

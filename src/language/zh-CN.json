@@ -27,5 +27,6 @@
   "ProcessReminder": "一键发送仅处理状态为None或Failed的数据。",
   "Memo is too long": "Memo过长。",
   "Resending...": "重发中……",
-  "ConfirmResend": "确定要重新发送吗？"
+  "ConfirmResend": "确定要重新发送吗？",
+  "ResendStop": "重新发送已停止，因为此交易已成功发送过。"
 }
