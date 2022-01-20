@@ -224,6 +224,8 @@ export default defineComponent({
           duration: 2000
         })
       }
+
+      store.commit('persistent/refreshBalance')
     }
 
     function remove(row) {
@@ -354,6 +356,8 @@ export default defineComponent({
             })
           }
         }
+
+        store.commit('persistent/refreshBalance')
       }
     }
   }
