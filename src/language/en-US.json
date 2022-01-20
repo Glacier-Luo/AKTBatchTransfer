@@ -14,5 +14,18 @@
   "SetSuccess": "Set success!",
   "Balance": "Balance",
   "Address": "Address",
-  "Refreshing!": "Refreshing!"
+  "Refreshing!": "Refreshing!",
+  "Checktx": "Check tx",
+  "Resend": "Resend",
+  "Import": "Import",
+  "Export": "Export",
+  "SendAll": "Send All",
+  "Remove": "Remove",
+  "ClearAll": "Clear All",
+  "TransferReminder": "Please import using the exported file as a template.",
+  "IncompleteData": "Incomplete data exists and has been marked as Failed.",
+  "ProcessReminder": "Send All only processes data with status of None or Failed.",
+  "Memo is too long": "Memo is too long",
+  "Resending...": "Resending...",
+  "ConfirmResend": "Are you sure you want to resend it?"
 }

@@ -14,5 +14,18 @@
   "SetSuccess": "设置成功！",
   "Balance": "余额",
   "Address": "地址",
-  "Refreshing!": "刷新中！"
+  "Refreshing!": "刷新中！",
+  "Checktx": "检查tx",
+  "Resend": "重发",
+  "Import": "导入",
+  "Export": "导出",
+  "SendAll": "一键发送",
+  "Remove": "删除",
+  "ClearAll": "删除全部",
+  "TransferReminder": "请使用导出的文件作为模板进行导入。",
+  "IncompleteData": "存在不完整数据，已标记为Failed。",
+  "ProcessReminder": "一键发送仅处理状态为None或Failed的数据。",
+  "Memo is too long": "Memo过长。",
+  "Resending...": "重发中……",
+  "ConfirmResend": "确定要重新发送吗？"
 }
